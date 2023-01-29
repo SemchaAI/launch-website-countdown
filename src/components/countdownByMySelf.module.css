@@ -38,7 +38,7 @@
   z-index: 1;
   border-radius: 5px;
   background-color: var(--bg);
-  top: 47%;
+  top: 46%;
   left: 96%;
 }
 .segment-display2::before{
@@ -48,7 +48,7 @@
   z-index: 1;
   border-radius: 5px;
   background-color: var(--bg);
-  top: 47%;
+  top: 46%;
   right: 96%;
 }
 
@@ -72,24 +72,10 @@
     width: 75px;
 }
 .segment-display2::after{
-  position: absolute;
-  content: '';
   padding: 2px;
-  z-index: 1;
-  border-radius: 5px;
-  background-color: var(--bg);
-  top: 47%;
-  left: 96%;
 }
 .segment-display2::before{
-  position: absolute;
-  content: '';
   padding: 2px;
-  z-index: 1;
-  border-radius: 5px;
-  background-color: var(--bg);
-  top: 47%;
-  right: 96%;
 }
 }
 
@@ -164,7 +150,6 @@
   }
   .segment-overlay__top2,
   .segment-overlay__bottom2 {
-
   border-radius: 5px;
   }
 }
