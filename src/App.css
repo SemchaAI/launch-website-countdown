@@ -1,38 +1,113 @@
-.App {
-  text-align: center;
+* {
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+ul,li, ol {
+  list-style: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+:root{
+  --grayish-blue: hsl(237, 18%, 59%);
+  --bg:hsl(249, 18%, 14%);
+  --soft-red:hsl(345, 95%, 68%);
+  --white: white;
+  --dark-desaturated-blue:hsl(242.3, 22.8%, 22.4%);
+  --desaturated-blue:hsl(236, 21%, 26%);
+  --dark-blue:hsl(235, 16%, 14%);
+  --darkest-blue:hsl(234, 17%, 12%);
+  --dark :rgba(25, 26, 36, 0.3)
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+body{
+  font-family: 'Red Hat Text', sans-serif;
+  font-size: 14px;
+
+  background-color: var(--bg);
+  background-image: url('./images/bg-stars.svg') ;
+}
+
+.container {
+  padding: 0 80px;
+  margin: 0 auto ;
+  max-width: 1440px;	
   display: flex;
   flex-direction: column;
-  align-items: center;
+ /* overflow: hidden; */
+  height: 100vh;
+}
+
+@media (width <= 768px){
+  .container {
+    max-width: 375px;
+    padding: 0;
+    
+  }
+}
+
+ @media (width >= 1440px){
+  .container {
+    max-width: 1440px;	
+  }
+}
+
+.slogan{
+  color: var(--white);
+  margin-top: 150px;
+  font-size: 23px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .4rem;
+  align-self: center;
+}
+.footer{
+  content: '';
+  position: fixed;
+  bottom: 0px;
+  align-self: center;
+  width: 100%;
+  height: 197px;
+  background-size: 100% 100%;
+  background-image: url('./images/pattern-hills.svg');
+
+  display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-content: center;
 }
 
-.App-link {
-  color: #61dafb;
+.linksList{
+  display: flex;
+  justify-content: center;
+
+  gap: 30px;
+
+  margin-top: 100px;
+}
+@media (width <= 768px){
+  .slogan{
+    margin-top: 150px;
+    font-size: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: .4rem;
+    align-self: center;
+  }
+  .footer{
+    width: 100%;
+    height: 30%;
+
+    background: url('./images/pattern-hills.svg') no-repeat 90% ;
+    background-attachment: local;
+    background-size: 200% 100%;
+  }
+  .linksList{
+    gap: 30px;
+  }
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.linkItem {
+ fill: var(--grayish-blue);
+}
+.linkItem:hover {
+  fill: var(--soft-red);
 }
